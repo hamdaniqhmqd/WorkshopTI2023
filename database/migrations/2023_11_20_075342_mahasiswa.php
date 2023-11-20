@@ -9,16 +9,18 @@ return new class extends Migration
 
     public function up(): void
     {
-        Schema::create('mahasiswa', function (Blueprint $table) {
+        Schema::create('coba', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('Nama');
             $table->string('NIM');
+            $table->string('Prodi');
+            $table->string('Kelas');
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('mahasiswa');
+        Schema::dropIfExists('coba');
     }
 };
